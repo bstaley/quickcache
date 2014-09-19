@@ -18,6 +18,25 @@ with no expiration
 
 ####retrieve data
 
-`cache.get('terms');`
->with the first variable above if you did not get the data within 2s it would return a null.
->on the second example the data would be returned.
+`var termData = cache.get('terms');`
+>with the first `cache` variable above if you did not get the data within 2s it would return a `null`.
+>on the second `cache` the data would be `{a:'1',b:'2',c:'3'}` because a timeout does not exist.
+
+##Why Timeout?
+Fair enough. Lets say you have some data in a hybrid application. This data may change once a month or once a week. It's not really critical data, but you would like to check for it every once and a while.
+
+```
+\\create cache object to expire once a week
+var colorCache = new QuickCache((1000 * 60 * 60 * 24 * 7));
+
+\\try to get colors from cache
+var colors = colorCache.get('colors');
+
+\\if colors don't exist or are expired get the latest
+if(!colors){
+    //call external to get colors
+    colors = getColors();
+    //refresh the cache
+    colorCache.set('colors',colors);
+}
+```
