@@ -1,7 +1,7 @@
 Quick Cache
 ==========
 
-Script for storing json objects in the localstorage, if available. has a timeout feature that will ignore expired data.
+Script for storing JavaScript objects in the localStorage, if available. The script has a timeout feature that will return a `null` if the data has expired.
 
 ##Usage
 ####initialize
