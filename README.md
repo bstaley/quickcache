@@ -6,6 +6,12 @@ Script for storing JavaScript objects in the localStorage, if available. The scr
 ##Usage
 ####initialize
 
+with 2s expiration and an error callback handler
+`var cache = new QuickCache(2000, function(error){/*handle error*/});`
+
+with no expiration and an error callback handler
+`var cache = new QuickCache(function(error){/*handle error*/});`
+
 with 2s expiration
 `var cache = new QuickCache(2000);`
 
