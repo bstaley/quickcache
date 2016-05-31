@@ -1,0 +1,24 @@
+{
+    "name": "quick-cache",
+    "version": "0.1.0",
+    "description": "Helper script for storing JavaScript objects in the localStorage, if available.",
+    "main": "quickCache.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "javascript",
+        "localStorage",
+    ],
+    "author": {
+        "name": "bstaley",
+        "email": "bstaley0@gmail.com"
+    },
+    "license": [
+        {
+            "type": "Apache License, Version 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+        }
+    ],
+    "preferGlobal": "true"
+}
